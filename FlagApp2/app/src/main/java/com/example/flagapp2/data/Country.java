@@ -1,4 +1,4 @@
-package fr.uavignon.ceri.tp1.data;
+package com.example.flagapp2.data;
 
 public class Country {
 

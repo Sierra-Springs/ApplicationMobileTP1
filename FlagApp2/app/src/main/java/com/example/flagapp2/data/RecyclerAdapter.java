@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flagapp2.R;
 
-import fr.uavignon.ceri.tp1.data.Country;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
@@ -36,9 +35,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.itemTitle.setText(Country.countries[i].getName());
         viewHolder.itemDetail.setText(Country.countries[i].getCapital());
-        String uri = "@drawable/name_file";
+        String uri = Country.countries[i].getImgUri();
         Context c = viewHolder.itemImage.getContext();
-        viewHolder.itemImage.setImageDrawable(c.getResources().getDrawable(c.getResources(). getIdentifier (uri, null , c.getPackageName())));
+        viewHolder.itemImage.setImageDrawable(c.getResources().getDrawable(c.getResources().getIdentifier (uri, null , c.getPackageName())));
         //viewHolder.itemImage.setImageResource(images[i]);
     }
 
